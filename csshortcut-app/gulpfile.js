@@ -2,6 +2,7 @@ var { series, src, parallel, dest, watch } = require('gulp')
 var pugPlugin = require ('gulp-pug')
 var stylusPlugin = require('gulp-stylus')
 var connect = require('gulp-connect')
+var imageminPlugin = require('gulp-imagemin')
 
 // Tarefa para compilar os arquivos Pug e Stylus
 function pug() {
@@ -16,6 +17,12 @@ function stylus() {
             .pipe(stylusPlugin())
             .pipe(dest('./out/assets/styles/'))
             .pipe(connect.reload()) // Atualiza o navegador automaticamente quando os arquivos Stylus forem compilados
+}
+
+function imagemin() {
+    return src('./src/assets/img/*')
+    .pipe(imageminPlugin())
+    .pipe(dest('./out/assets/img/'))
 }
 
 // Qualquer alteracao que ocorra nos arquivos pug ou stylus, o gulp vai executar as tarefas correspondentes
@@ -33,7 +40,8 @@ function serve() {
         livereload: true
     })
 }
+exports.imagemin = imagemin
 
 exports.server = parallel (watchTask, serve)
 
-exports.build = series(pug, stylus);
+exports.build = series(pug, stylus, imagemin);
