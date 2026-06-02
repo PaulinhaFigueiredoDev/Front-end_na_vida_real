@@ -21,6 +21,8 @@ function stylus() {
 // Qualquer alteracao que ocorra nos arquivos pug ou stylus, o gulp vai executar as tarefas correspondentes
 function watchTask() {
     watch('./src/*.pug', pug)
+    watch('./src/layouts/*.pug', pug)
+    watch('./src/partials/*.pug', pug)
     watch('./src/assets/styles/*.styl', stylus)
 }
 
