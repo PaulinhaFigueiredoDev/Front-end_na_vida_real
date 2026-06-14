@@ -40,6 +40,7 @@ function serve() {
         livereload: true
     })
 }
+exports.imagemin = imagemin
 
 exports.server = parallel (watchTask, serve)
 
