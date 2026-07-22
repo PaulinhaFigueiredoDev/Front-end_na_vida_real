@@ -1,30 +1,69 @@
-/* Colors */
-/* 
-
-*/
 * {
   box-sizing: border-box;
 }
-/* Header */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: #29252a;
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  max-width: 760px;
+  margin: 0 0 1.5rem;
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 1rem;
+}
+h3,
+p {
+  margin-top: 0;
+}
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.narrow {
+  display: block;
+  max-width: 800px;
+}
 .header {
   width: 100%;
-  background-color: #40a37f;
+  background: #212121;
+  color: #fff;
+}
+.header .container {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.brand {
+  flex: 1;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.35rem;
+  text-decoration: none;
 }
 .menu {
-  border: 1px dashed;
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 400px) {
-  .menu {
-    width: 100%;
-    justify-content: center;
-  }
-}
 .menu-itens {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 .menu-item {
   list-style: none;
@@ -34,27 +73,170 @@
   color: #fff;
   text-decoration: none;
   display: inline-block;
-  padding: 10px;
+  padding: 22px 10px;
+  transition: color 0.2s ease;
 }
-.container {
-  border: 1px dashed;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+.menu-link:hover,
+.menu-link:focus {
+  color: #f06;
 }
 .profile {
-  margin-left: auto;
-}
-@media screen and (max-width: 400px) {
-  .profile {
-    width: 100%;
-    text-align: center;
-  }
+  flex: 1;
+  justify-content: flex-end;
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .profile-img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
   vertical-align: middle;
   border-radius: 50%;
-  margin: 5px;
+}
+.hero {
+  background: linear-gradient(135deg, #212121, #333);
+  color: #fff;
+  padding: 96px 0;
+}
+.hero-content {
+  align-items: center;
+  gap: 48px;
+}
+.hero-copy {
+  flex: 1 1 600px;
+}
+.lead {
+  color: #ddd;
+  font-size: 1.2rem;
+  max-width: 650px;
+}
+.eyebrow {
+  color: #f06;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+.button {
+  border-radius: 999px;
+  display: inline-block;
+  font-weight: 700;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+.button-primary {
+  background: #f06;
+  color: #fff;
+}
+.button-secondary {
+  border: 1px solid #777;
+  color: #fff;
+}
+.hero-card {
+  background: #fff;
+  border-radius: 20px;
+  color: #29252a;
+  display: flex;
+  flex: 0 1 300px;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+.hero-card-label {
+  color: #f06;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.hero-card strong {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.hero-card-note {
+  color: #777;
+}
+.section {
+  padding: 88px 0;
+}
+.section .container {
+  display: block;
+}
+.section-muted {
+  background: #f7f5f6;
+}
+.narrow p:not(.eyebrow) {
+  color: #625c61;
+  font-size: 1.1rem;
+}
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 32px;
+  width: 100%;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ebe6e8;
+  border-radius: 16px;
+  padding: 28px;
+}
+.card p {
+  color: #625c61;
+}
+.cta {
+  background: #f06;
+  color: #fff;
+  text-align: center;
+}
+.cta p {
+  color: #ffe5f0;
+}
+.footer {
+  background: #212121;
+  color: #bbb;
+  padding: 24px 0;
+}
+.footer .container {
+  align-items: center;
+  justify-content: space-between;
+}
+.footer p {
+  margin: 0;
+}
+.footer a {
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  .header .container {
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+  .menu-link {
+    padding: 10px 6px;
+  }
+  .profile {
+    display: none;
+  }
+  .hero {
+    padding: 64px 0;
+  }
+  .hero-card {
+    flex-basis: 100%;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .footer .container {
+    gap: 8px;
+  }
 }

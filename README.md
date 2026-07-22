@@ -6,7 +6,7 @@ Repositório criado para armazenar os códigos, exercícios e projetos desenvolv
 
 Este repositório acompanha minha evolução nos estudos de desenvolvimento front-end.
 
-Durante as aulas, são praticados conceitos de:
+O projeto principal, **CSShortcut**, apresenta essa evolução em uma página responsiva e reúne conceitos de:
 
 * HTML;
 * CSS;
@@ -74,22 +74,16 @@ Instale as dependências:
 npm install
 ```
 
-Instale o Gulp CLI globalmente:
-
-```bash
-npm install -g gulp-cli
-```
-
 Inicie o servidor de desenvolvimento:
 
 ```bash
-gulp server
+npm start
 ```
 
 Para gerar os arquivos finais do projeto:
 
 ```bash
-gulp build
+npm run build
 ```
 
 ## Objetivo

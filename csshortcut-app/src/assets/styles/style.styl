@@ -1,78 +1,63 @@
-/* Colors */
-highlight-color = #40a37f
+highlight-color = #ff0066
 secondary-color = #212121
-bg-color = #333
+bg-color = #333333
+muted-color = #f7f5f6
+text-color = #29252a
 
-/* 
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: text-color; background: #fff; font-family: 'Roboto', sans-serif; line-height: 1.6; }
+h1, h2, h3 { line-height: 1.15; }
+h1 { font-size: clamp(2.5rem, 7vw, 5rem); max-width: 760px; margin: 0 0 1.5rem; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 1rem; }
+h3, p { margin-top: 0; }
 
-*/
-* {
-    box-sizing: border-box;
-}
+.container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; }
+.narrow { display: block; max-width: 800px; }
+.header { width: 100%; background: secondary-color; color: white; }
+.header .container { align-items: center; flex-wrap: nowrap; }
+.brand { flex: 1; color: white; font-weight: 900; font-size: 1.35rem; text-decoration: none; }
+.menu { display: flex; align-items: center; }
+.menu-itens { margin: 0; padding: 0; }
+.menu-item { list-style: none; display: inline-block; }
+.menu-link { color: #fff; text-decoration: none; display: inline-block; padding: 22px 10px; transition: color .2s ease; }
+.menu-link:hover, .menu-link:focus { color: highlight-color; }
+.profile { flex: 1; justify-content: flex-end; margin-left: 18px; display: flex; align-items: center; gap: 8px; }
+.profile-img { width: 36px; height: 36px; object-fit: cover; vertical-align: middle; border-radius: 50%; }
 
-/* Header */
-.header {
-    width: 100%;
-    background-color: highlight-color;
-}
+.hero { background: linear-gradient(135deg, secondary-color, bg-color); color: white; padding: 96px 0; }
+.hero-content { align-items: center; gap: 48px; }
+.hero-copy { flex: 1 1 600px; }
+.lead { color: #ddd; font-size: 1.2rem; max-width: 650px; }
+.eyebrow { color: highlight-color; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.button { border-radius: 999px; display: inline-block; font-weight: 700; padding: 12px 20px; text-decoration: none; }
+.button-primary { background: highlight-color; color: white; }
+.button-secondary { border: 1px solid #777; color: white; }
+.hero-card { background: white; border-radius: 20px; color: text-color; display: flex; flex: 0 1 300px; flex-direction: column; gap: 12px; padding: 32px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+.hero-card-label { color: highlight-color; font-size: .75rem; font-weight: 700; letter-spacing: .08em; }
+.hero-card strong { font-size: 1.6rem; line-height: 1.2; }
+.hero-card-note { color: #777; }
+.section { padding: 88px 0; }
+.section .container { display: block; }
+.section-muted { background: muted-color; }
+.narrow p:not(.eyebrow) { color: #625c61; font-size: 1.1rem; }
+.cards { display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); margin-top: 32px; width: 100%; }
+.card { background: white; border: 1px solid #ebe6e8; border-radius: 16px; padding: 28px; }
+.card p { color: #625c61; }
+.cta { background: highlight-color; color: white; text-align: center; }
+.cta p { color: #ffe5f0; }
+.footer { background: secondary-color; color: #bbb; padding: 24px 0; }
+.footer .container { align-items: center; justify-content: space-between; }
+.footer p { margin: 0; }
+.footer a { color: white; }
 
-.menu {
-    border: 1px dashed;
-    display: flex;
-    align-items: center;
-}
-
-@media screen and (max-width: 400px){
-    .menu {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-.menu-itens {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-}
-
-.menu-item {
-    list-style: none;
-    display: inline-block;
-}
-
-.menu-link {
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-}
-
-.container {
-    border: 1px dashed;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.profile {
-    margin-left: auto;
-}
-
-@media screen and (max-width: 400px){
-    .profile {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-.profile-img {
-    vertical-align: middle;
-    border-radius: 50%;
-    margin: 5px;
-}
-
-.profile-text {
-    
+@media screen and (max-width: 700px) {
+    .header .container { padding-bottom: 8px; padding-top: 8px; }
+    .menu-link { padding: 10px 6px; }
+    .profile { display: none; }
+    .hero { padding: 64px 0; }
+    .hero-card { flex-basis: 100%; }
+    .cards { grid-template-columns: 1fr; }
+    .footer .container { gap: 8px; }
 }

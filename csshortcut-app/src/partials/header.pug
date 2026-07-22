@@ -1,15 +1,17 @@
 header.header
     div.container
-        nav.menu
+        a.brand(href="/") CSShortcut
+        nav.menu(aria-label="Navegação principal")
             ul.menu-itens
                 li.menu-item 
-                    a.menu-link(href="#") Home
+                    a.menu-link(href="#inicio") Início
                 li.menu-item 
-                    a.menu-link(href="#") Perfil
+                    a.menu-link(href="#sobre") Sobre
+                li.menu-item
+                    a.menu-link(href="#conteudos") Conteúdos
         div.profile 
-            img.profile-img(src="assets/img/vivien.png")
+            img.profile-img(src="assets/img/vivien.png" alt="Paula Figueiredo")
             span.profile-text Paula Figueiredo
-
 
 
 

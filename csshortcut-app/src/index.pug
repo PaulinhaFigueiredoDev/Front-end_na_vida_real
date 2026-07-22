@@ -1,4 +1,37 @@
 extends ./layouts/default.pug
 
 block content
-    div Hello World
+    section.hero#inicio
+        div.container.hero-content
+            div.hero-copy
+                p.eyebrow Estudos e prática em front-end
+                h1 Construindo interfaces com clareza e propósito.
+                p.lead O CSShortcut reúne minha evolução em HTML, CSS, JavaScript e nas ferramentas que ajudam a transformar ideias em experiências web.
+                div.hero-actions
+                    a.button.button-primary(href="#conteudos") Explorar conteúdos
+                    a.button.button-secondary(href="https://github.com/PaulinhaFigueiredoDev/Front-end_na_vida_real" target="_blank" rel="noreferrer") GitHub
+            div.hero-card(aria-label="Resumo do projeto")
+                span.hero-card-label STACK PRINCIPAL
+                strong HTML · CSS · JavaScript
+                span.hero-card-note Pug · Stylus · Gulp
+
+    section.section#sobre
+        div.container.narrow
+            p.eyebrow Sobre o projeto
+            h2 Um laboratório para aprender fazendo.
+            p Este projeto nasceu durante o curso Front-end na Vida Real e acompanha exercícios, experimentos e decisões de organização de código. A proposta é tornar o aprendizado visível e evoluir esta base até ela se tornar uma aplicação cada vez mais completa.
+
+    section.section.section-muted#conteudos
+        div.container
+            p.eyebrow Conteúdos
+            h2 O que estou praticando
+            div.cards
+                each item in [{title: 'Fundamentos de JavaScript', text: 'Variáveis, tipos, operadores, condicionais, loops, funções, objetos e arrays.'}, {title: 'Interfaces responsivas', text: 'Estrutura semântica, composição visual, tipografia e adaptação para diferentes telas.'}, {title: 'Ferramentas front-end', text: 'Pug, Stylus, Gulp e uma organização de projeto preparada para crescer.'}]
+                    article.card
+                        h3= item.title
+                        p= item.text
+
+    section.section.cta
+        div.container.narrow
+            h2 Em constante evolução.
+            p Cada exercício é uma oportunidade de transformar conhecimento em código mais simples, acessível e bem organizado.

@@ -2,7 +2,6 @@ var { series, src, parallel, dest, watch } = require('gulp')
 var pugPlugin = require ('gulp-pug')
 var stylusPlugin = require('gulp-stylus')
 var connect = require('gulp-connect')
-var imageminPlugin = require('gulp-imagemin')
 
 // Tarefa para compilar os arquivos Pug e Stylus
 function pug() {
@@ -20,8 +19,7 @@ function stylus() {
 }
 
 function imagemin() {
-    return src('./src/assets/img/*')
-    .pipe(imageminPlugin())
+    return src('./src/assets/img/*', { encoding: false })
     .pipe(dest('./out/assets/img/'))
 }
 

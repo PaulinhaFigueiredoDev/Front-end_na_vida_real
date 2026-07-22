@@ -157,13 +157,13 @@ finalizado
 Para iniciar o servidor de desenvolvimento:
 
 ```bash
-gulp server
+npm start
 ```
 
 Para gerar os arquivos finais do projeto:
 
 ```bash
-gulp build
+npm run build
 ```
 
 Antes de enviar sua contribuição, verifique se o projeto continua funcionando corretamente.

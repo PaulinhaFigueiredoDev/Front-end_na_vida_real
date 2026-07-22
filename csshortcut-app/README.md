@@ -1,7 +1,6 @@
-# CSShortcut APP
+# CSShortcut
 
-> Criado para guardar codigo das aulas realizadas no curso:
-- Front end da vida real.
+> Um espaço para organizar e demonstrar estudos de desenvolvimento front-end.
 
 ## Stack
 
@@ -9,23 +8,19 @@
 - HTML Template Engine: [Pug](https://pugjs.org/api/getting-started.html)
 - CSS Preprocessador: [Stylus](https://stylus-lang.com)
 
-## Run the project locally
+## Executar localmente
 
-**1 -** Prepare the enviroment:
+**1 -** Instale as dependências:
 ```sh
-$ npm install -g gulp-cli
-```
-
-**2 -** Clone the project and install the dependencies:
-```sh
-$ git clone https://github.com/PaulinhaFigueiredoDev/Front-end_na_vida_real
-$ cd csshortcut-app
 $ npm install
 ```
-**3 -** Run static server and livereload:
+
+**2 -** Inicie o servidor com livereload:
 ```sh
-$ gulp server
+$ npm start
 ```
+
+Para gerar os arquivos finais em `out/`, use `npm run build`.
 
 ## Folders Structure
 
@@ -58,17 +53,18 @@ $ gulp server
 
 ## Automatic Tasks
 
-- `$ gulp build`: Compile, concat and minify all files.
-- `$ gulp server`: Watch the files to build and start a static server.
+- `$ npm run build`: Compila Pug, Stylus e imagens para `out/`.
+- `$ npm start`: Observa alterações e inicia o servidor local.
 
 ## Versioning
 
 To keep better organization of releases we follow the [Semantic Versioning 2.0.0](http://semver.org/) guidelines.
 
-## Contributing
-Find on our [roadmap](https://github.com/PaulinhaFigueiredoDev/Front-end_na_vida_real/tree/main/csshortcut-app) the next steps of the project ;)
-<br>
-Want to contribute? [Follow these recommendations]().
+## Próximos passos
 
-## License
-[MIT License]()
+- adicionar exemplos interativos dos exercícios de JavaScript;
+- publicar uma demonstração online;
+- ampliar a cobertura de acessibilidade e testes.
+
+## Licença
+Este projeto está disponível sob a licença MIT.
