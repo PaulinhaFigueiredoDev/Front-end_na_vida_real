@@ -59,7 +59,7 @@ Front-end_na_vida_real/
 Clone o repositório:
 
 ```bash
-git clone https://github.com/PaulinhaFigueiredodev/Front-end_na_vida_real.git
+git clone https://github.com/PaulinhaFigueiredoDev/Front-end_na_vida_real.git
 ```
 
 Entre na pasta do projeto:
@@ -98,4 +98,4 @@ O objetivo deste repositório é registrar meu aprendizado, praticar os conteúd
 
 ## Autora
 
-Desenvolvido por [Paula Figueiredo](https://github.com/PaulinhaFigueiredodev).
+Desenvolvido por [Paula Figueiredo](https://github.com/PaulinhaFigueiredoDev).

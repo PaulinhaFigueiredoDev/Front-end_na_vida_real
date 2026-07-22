@@ -18,7 +18,7 @@ $ npm install -g gulp-cli
 
 **2 -** Clone the project and install the dependencies:
 ```sh
-$ git clone https://github.com/PaulinhaFigueiredodev/Front-end_na_vida_real
+$ git clone https://github.com/PaulinhaFigueiredoDev/Front-end_na_vida_real
 $ cd csshortcut-app
 $ npm install
 ```
@@ -66,7 +66,7 @@ $ gulp server
 To keep better organization of releases we follow the [Semantic Versioning 2.0.0](http://semver.org/) guidelines.
 
 ## Contributing
-Find on our [roadmap](https://github.com/PaulinhaFigueiredodev/Front-end_na_vida_real/tree/main/csshortcut-app) the next steps of the project ;)
+Find on our [roadmap](https://github.com/PaulinhaFigueiredoDev/Front-end_na_vida_real/tree/main/csshortcut-app) the next steps of the project ;)
 <br>
 Want to contribute? [Follow these recommendations]().
 
